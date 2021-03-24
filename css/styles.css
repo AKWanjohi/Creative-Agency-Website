@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #f60f20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  font-size: 62.5%;
+  color: #111;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500px;
+}
+
+p {
+  margin: 2.5rem 0 1.5rem;
+  font-size: 2rem;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  margin: 2rem 0;
+  border: 0;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  position: absolute;
+  top: 3rem;
+  left: 10rem;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.toggle {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  background: var(--primary-color) url(../images/menu.png);
+  background-size: 3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 3;
+}
+
+.toggle.active {
+  background: var(--primary-color) url(../images/close.png);
+  background-size: 2.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 3rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #111;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.8);
+}
+
+.navigation .email-icon {
+  position: absolute;
+  bottom: 2rem;
+  transform: scale(0.5);
+}
+
+.home-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.home-content {
+  z-index: 1;
+  max-width: 600px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .home-img {
+    display: none;
+  }
+
+  .logo {
+    top: 2rem;
+    left: 2rem;
+    font-size: 2.5rem;
+  }
+
+  section {
+    padding: 3rem;
+  }
+
+  .toggle {
+    width: 4rem;
+    height: 4rem;
+  }
+}
