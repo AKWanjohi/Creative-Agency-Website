@@ -27,9 +27,16 @@ p {
 
 section {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   align-items: center;
   padding: 100px;
+  margin-top: 6rem;
+}
+
+section.home {
+  flex-direction: row;
+  margin-top: 0;
 }
 
 .btn {
@@ -170,5 +177,60 @@ section {
   .toggle {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+/* SERVICES */
+.title h1 {
+  font-size: 2.8rem;
+}
+
+.title p {
+  font-size: 1.8rem;
+}
+
+.service h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: #1b206e;
+}
+
+.service p {
+  font-size: 1.5rem;
+}
+
+.services {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  text-align: center;
+}
+
+.service {
+  padding: 3rem;
+}
+
+.service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.service .icon img {
+  max-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .services {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
